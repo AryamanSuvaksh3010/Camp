@@ -1,8 +1,6 @@
 # 🌄 Camp
 
-Camp is a **full-stack web application** that allows users to discover, create, rate, and review beautiful campgrounds around the world. With built-in authentication, location mapping, and image upload capabilities, Camp provides a complete platform for campground enthusiasts.
-
-![Camp Screenshot](https://i.imgur.com/oV2bFzK.png)
+Camp is a **full-stack web application** that allows users to discover, create, rate, and review beautiful campgrounds around the world. With built-in authentication, location mapping, and image upload capabilities, Camp provides a complete platform for campground enthusiasts!
 
 ---
 
@@ -59,19 +57,6 @@ Camp is a **full-stack web application** that allows users to discover, create, 
 
 ---
 
-## 🌐 Live Demo
-
-🚧 _[Coming Soon — You can host on Render, Vercel, or Heroku]_  
-
----
-
-## 📸 Screenshots
-
-| Landing Page | Campground View | Review Section |
-|--------------|------------------|----------------|
-| ![1](https://i.imgur.com/SsJmZ9t.png) | ![2](https://i.imgur.com/qbl6DhV.png) | ![3](https://i.imgur.com/OWo4bLo.png) |
-
----
 
 ## 🚀 How to Run Locally
 
