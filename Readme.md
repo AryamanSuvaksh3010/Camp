@@ -1,22 +1,82 @@
-# YelpCamp
-YelpCamp is a full-stack web Application  designed to feature, rate, and review different campgrounds, 
-The app performs CRUD operations for users, the campground, and the reviews. 
+# 🌄 Camp
 
-YelpCamp will play an essential role in making decisions like choosing a campground. This system heavily relies on individuals voluntarily submitting reviews to build a reputation for nearby businesses.
+Camp is a **full-stack web application** that allows users to discover, create, rate, and review beautiful campgrounds around the world. With built-in authentication, location mapping, and image upload capabilities, Camp provides a complete platform for campground enthusiasts.
 
-Functionalities : 
- 
-1. First of all, the User can register and log in to implement authentication. Used Passport.js for that purpose
-2. Users can create, edit, and remove campgrounds. For authorization, In order to review or create a campground, you must be logged into your account. A user can only edit or delete his campgrounds or reviews
-Users can review campgrounds, and edit or delete their review
-3. A map has also been displayed for better searching. While Creating a campground, when a user enters a location, the map finds and shows it automatically with the help of the location geocoding feature of the Mapbox API.
-Campgrounds are marked on a cluster map using Mapbox API. Every Campground has its location displayed separately on a map
-4. Client-side and server-side validations are done. 
-5. Images of campgrounds are uploaded to Cloudinary. We can add multiple images for a campground. Images can be added and deleted after the creation of Campground. 
-6. Sessions and cookies were used
+![Camp Screenshot](https://i.imgur.com/oV2bFzK.png)
 
+---
 
+## ✨ Features
 
-This project is being created using Node.js, Express, MongoDB, Javascript, EJS, CSS , and Bootstrap. Passport.js is used to handle authentication.
+- 📝 **User Authentication**  
+  - Register and log in using Passport.js.
+  - Only authenticated users can create/edit/delete campgrounds and reviews.
 
+- 🏕️ **Campground Management**  
+  - Create, edit, and delete campgrounds.
+  - Upload multiple images per campground using **Cloudinary**.
+  - Automatically geocode locations with **Mapbox** and display them on interactive maps.
 
+- 🌍 **Interactive Maps**  
+  - Clustered map view of all campgrounds.
+  - Each campground has its own location map.
+
+- 💬 **Review System**  
+  - Logged-in users can write, update, and delete reviews.
+  - Prevent duplicate reviews from the same user.
+
+- ✅ **Validations**
+  - Both client-side and server-side input validation.
+  - Flash messages for errors and feedback.
+
+- 💾 **Sessions & Cookies**
+  - User sessions maintained using cookies for persistent login.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Frontend**: HTML, EJS, CSS, Bootstrap
+- **Backend**: Node.js, Express
+- **Database**: MongoDB with Mongoose
+- **Authentication**: Passport.js
+- **Cloud Services**:
+  - Mapbox (Geolocation & Map Display)
+  - Cloudinary (Image Uploads)
+- **Others**: Express-session, Flash messages, Connect-mongo
+
+---
+
+## 🔐 Authorization Flow
+
+| Action                       | Auth Required | Owner Only |
+|-----------------------------|---------------|------------|
+| View Campgrounds            | ❌            | ❌         |
+| Create Campground           | ✅            | ❌         |
+| Edit/Delete Campground      | ✅            | ✅         |
+| Write a Review              | ✅            | ❌         |
+| Edit/Delete a Review        | ✅            | ✅         |
+
+---
+
+## 🌐 Live Demo
+
+🚧 _[Coming Soon — You can host on Render, Vercel, or Heroku]_  
+
+---
+
+## 📸 Screenshots
+
+| Landing Page | Campground View | Review Section |
+|--------------|------------------|----------------|
+| ![1](https://i.imgur.com/SsJmZ9t.png) | ![2](https://i.imgur.com/qbl6DhV.png) | ![3](https://i.imgur.com/OWo4bLo.png) |
+
+---
+
+## 🚀 How to Run Locally
+
+```bash
+git clone https://github.com/yourusername/Camp.git
+cd Camp
+npm install
+npm run dev
