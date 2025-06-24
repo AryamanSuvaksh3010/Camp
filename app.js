@@ -155,22 +155,18 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render('error', { err });
 });
 
-// ─── 8) CONNECT TO MONGODB & START SERVER ────────────────────────────────────
-const PORT = process.env.PORT || 3000;
+// ─── 8) CONNECT TO MONGODB ───────────────────────────────────────────────────
 console.log('Connecting to MongoDB…');
-
 mongoose.connect(dbUrl, {
   useNewUrlParser:    true,
   useUnifiedTopology: true,
   useCreateIndex:     true
 })
-  .then(() => {
-    console.log('Database connected');
-    app.listen(PORT, () => {
-      console.log(`Serving on port ${PORT}`);
-    });
-  })
+  .then(() => console.log('Database connected'))
   .catch(err => {
     console.error('MongoDB connection error:', err);
     process.exit(1);
   });
+
+// ─── 9) EXPORT FOR VERCEL ────────────────────────────────────────────────────
+module.exports = app;
