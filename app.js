@@ -10,6 +10,7 @@ process.emitWarning = (warning, type, code, ...args) => {
 // ─── 2) REQUIRE & CONFIG ────────────────────────────────────────────────────
 require('dotenv').config();
 const express        = require('express');
+
 const path           = require('path');
 const mongoose       = require('mongoose');
 const ejsMate        = require('ejs-mate');
@@ -170,3 +171,8 @@ mongoose.connect(dbUrl, {
 
 // ─── 9) EXPORT FOR VERCEL ────────────────────────────────────────────────────
 module.exports = app;
+const port=process.env.PORT||3000;
+app.listen(port,()=>{
+  console.log(`Serving on port ${port}`);
+});
+
