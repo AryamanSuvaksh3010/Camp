@@ -1,5 +1,8 @@
 const Campground = require('../models/campground');
 const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
+if(!process.env.MAPBOX_TOKEN){
+    throw new Error("Mapbox token missing in environment variables");
+}
 const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mbxGeocoding({ accessToken: process.env.MAPBOX_TOKEN });
 const { cloudinary } = require("../cloudinary");
